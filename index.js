@@ -12,11 +12,9 @@ const startServer = async () => {
     await db.collection("todos").insertMany([
         { id: "1", title: "Buy groceries" },
         { id: "2", title: "Install Aspecto" },
-        { id: "3", title: "Buy my own domain" },
+        { id: "3", title: "Buy my domain" },
     ]);
-    app.listen(port, () => {
-        console.log(`Example app listening on port ${port}`);
-    });
+    app.listen(port, () => console.log(`Server running on port ${port}`));
 };
 startServer();
 
